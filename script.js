@@ -56,7 +56,7 @@
 
         if (gameData.rollSum === 2) {
             //console.log("snake eyes were rolled");
-            game.innerHTML += '<h3>Oh snap ! Snake eyes!</h3>';
+            game.innerHTML += '<h4>Oh snap ! Snake eyes!</h4>';
             gameData.score[gameData.index] = 0;
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
             showCurrentScore();
@@ -66,7 +66,7 @@
         else if (gameData.roll1 === 1 || gameData.roll2 === 1) {
             //console.log("One of die is 1 your turn over !");
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
-            game.innerHTML += `<h3>Sorry, one of your roll was a one, switching to ${gameData.players[gameData.index]}</h3>`;
+            game.innerHTML += `<h4>Sorry, one of your roll was a one, switching to ${gameData.players[gameData.index]}</h4>`;
             setTimeout(setUpTurn, 2000);
         }
 
